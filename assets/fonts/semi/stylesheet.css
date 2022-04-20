@@ -1,0 +1,13 @@
+@font-face {
+    font-family: 'SF Pro Display';
+    src: url('assets/fonts/SFProDisplay-Semibold.eot');
+    src: url('assets/fonts/SFProDisplay-Semibold.eot?#iefix') format('embedded-opentype'),
+        url('assets/fonts/SFProDisplay-Semibold.woff2') format('woff2'),
+        url('assets/fonts/SFProDisplay-Semibold.woff') format('woff'),
+        url('assets/fonts/SFProDisplay-Semibold.ttf') format('truetype'),
+        url('assets/fonts/SFProDisplay-Semibold.svg#SFProDisplay-Semibold') format('svg');
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+
