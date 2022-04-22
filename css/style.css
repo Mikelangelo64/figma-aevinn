@@ -191,9 +191,18 @@ h7 {
   cursor: pointer;
 }
 
+a[data-goto] {
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+a[data-goto]:hover {
+  color: #296AC8;
+  font-weight: 700;
+}
+
 .header {
   padding: 34.54px 0 39.45px 0;
-  background: #EFF6FF;
+  background: #fff;
   position: fixed;
   left: 0;
   top: 0;
@@ -237,6 +246,9 @@ h7 {
 .header-content__log__in__btn:hover {
   background: #296AC8;
 }
+.header-content .call-block-btn:hover {
+  color: #296AC8;
+}
 
 .menu {
   -webkit-box-flex: 0;
@@ -259,9 +271,29 @@ h7 {
   line-height: 28px;
   letter-spacing: 0.1em;
   text-transform: uppercase;
+  position: relative;
 }
 .menu__item > a {
   color: inherit;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+.menu__item > a::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 59.57%;
+  height: 2px;
+  background: #296AC8;
+  opacity: 0;
+}
+.menu__item > a._active-page {
+  color: #296AC8;
+  font-weight: 700;
+}
+.menu__item > a._active-page::before {
+  opacity: 1;
 }
 
 .burger {
@@ -808,6 +840,9 @@ h7 {
 .footer-content .call-block-btn > p {
   font-size: 12px;
 }
+.footer-content .call-block-btn:hover {
+  color: #296AC8;
+}
 
 .footer-list {
   -webkit-box-flex: 0;
@@ -828,6 +863,7 @@ h7 {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  width: 115px;
 }
 .footer-list-column__title {
   display: none;

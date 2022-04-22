@@ -202,10 +202,18 @@ h7{
     cursor: pointer;
 }
 
+a[data-goto]{
+    transition: all 0.3s ease;
+    &:hover{
+        color: $blue;
+        font-weight: 700;
+    }
+}
+
 //HEADER---------------------------------
 .header {
     padding: 34.54px 0 39.45px 0;
-    background: $white-blue;
+    background: #fff;
 
     position: fixed;
     left: 0;
@@ -246,6 +254,12 @@ h7{
             background: $blue;
         }
     }
+
+    .call-block-btn{
+        &:hover{
+            color: $blue;
+        }
+    }
 }
 
 .menu {
@@ -264,10 +278,33 @@ h7{
         line-height: 28px;
         letter-spacing: 0.1em;
         text-transform: uppercase;
+        position: relative;
+
 
         & > a{
             color: inherit;
+            transition: all 0.3s ease;
+
+            &::before{
+                content: '';
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                width: 59.57%;
+                height: 2px;
+                background: $blue;
+                opacity: 0;
+            }
+            &._active-page{
+                color: $blue;
+                font-weight: 700;
+                &::before{
+                    opacity: 1;
+                }
+            }
         }
+
+        
     }
 }
 
@@ -777,6 +814,10 @@ h7{
         & > p{
             font-size: 12px;
         }
+
+        &:hover{
+            color: $blue;
+        }
     }
 }
 .footer-list {
@@ -787,6 +828,7 @@ h7{
     &-column {
         display: flex;
         flex-direction: column;
+        width: 115px;
         &__title{
             display: none;
         }
